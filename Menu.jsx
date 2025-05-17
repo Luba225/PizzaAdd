@@ -7,12 +7,16 @@ import DrinkItem from './DrinkItem';
 
 function Menu() {
   return (
-    <div>
-      <h2>Піца</h2>
-      {pizzas.map(pizza => <PizzaItem key={pizza.id} pizza={pizza} />)}
+    <div className="menu">
+      <h2 className="section-title">🍕Піца</h2>
+      <div className="menu-items">
+        {pizzas.map(pizza => <PizzaItem key={pizza.id} pizza={pizza} />)}
+      </div>
 
-      <h2>Напої</h2>
-      {drinks.map(drink => <DrinkItem key={drink.id} drink={drink} />)}
+      <h2 className="section-title">🥤Напої</h2>
+      <div className="menu-items">
+        {drinks.map(drink => <DrinkItem key={drink.id} drink={drink} />)}
+      </div>
     </div>
   );
 }
